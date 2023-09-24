@@ -1,0 +1,8 @@
+<h2 class="country" *ngIf="country">{{ country.name }}</h2>
+  <h3>Languages Spoken:</h3>
+  <ul>
+    <li *ngFor="let language of languages">
+      {{ language.language }}
+      <span *ngIf="language.official === 1">(Official)</span>
+    </li>
+  </ul>

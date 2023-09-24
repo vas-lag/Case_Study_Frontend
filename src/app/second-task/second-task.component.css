@@ -1,0 +1,36 @@
+.country-stats-table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: azure;}
+
+    .country-stats-table td {
+    padding-top: 2px;
+    padding-bottom: 2px;;
+}
+
+.country-stats-table td, th {
+    padding-left: 1em;
+    padding-right: 2em;
+    border: 1px solid #ddd;
+}
+
+.country-stats-table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.country-stats-table caption {
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 0.5em;
+    margin-top: 3em;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}

@@ -1,0 +1,16 @@
+.country {
+    margin-top: 8px;
+}
+
+.country-name {
+    text-decoration: none;
+    color: black;
+}
+
+.country-name:hover {
+    color: #888;
+}
+
+.task-title {
+    margin-top: 3em;
+}

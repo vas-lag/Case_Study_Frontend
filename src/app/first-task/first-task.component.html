@@ -1,0 +1,14 @@
+<h2 class="task-title">Countries of the world</h2>
+<h4>Click one to see its languages</h4>
+<ol>
+    <li *ngFor="let country of countries" class="country">
+        <strong>Country Name:</strong>
+        <a class="country-name"
+            [title] = "country.name"
+            [routerLink]= "['/countries', country.id, 'languages']">
+            {{country.name}}
+        </a><br>
+        <strong>Area:</strong> {{ country.area | number }}<br>
+        <strong>Country Code:</strong> {{ country.country_code2 }}
+    </li>
+</ol>

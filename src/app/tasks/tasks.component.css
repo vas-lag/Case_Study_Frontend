@@ -1,0 +1,16 @@
+.task-container {
+    padding: 1em;
+    margin: 1em;
+    border: 0.5px solid black;
+    text-align: center;
+    background-color: antiquewhite;
+    font-size: larger;
+}
+
+.task-anchor {
+    text-decoration: none;
+}
+
+.task-description {
+    text-align: center;
+}

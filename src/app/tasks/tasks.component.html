@@ -1,0 +1,7 @@
+<h2 class="task-description">Tasks</h2>
+<div class="task-holder">
+    <div *ngFor="let task of tasks" class="task-container">
+        <a class="task-anchor" routerLink="/tasks/{{task.id}}">{{task.name}}</a>
+        <p>{{task.description}}</p>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<h2 class="task-title">Filtered Country Data</h2>
+
+<div id="filters">
+    <label for="region">Select Region:</label>
+    <select id="region" [(ngModel)]="selectedRegion" (change)="onFilterChange()">
+        <option value="all" selected>All</option>
+        <option *ngFor="let region of regions" value="{{region.name}}">{{region.name}}</option>
+    </select>
+
+    <label for="yearFrom">Year From:</label>
+    <select id="yearFrom" [(ngModel)]="yearFrom" (change)="onFilterChange()">
+        <option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+    </select>
+
+    <label for="yearTo">Year To:</label>
+    <select id="yearTo" [(ngModel)]="yearTo" (change)="onFilterChange()">
+        <option *ngFor="let year of years" value="{{year}}">{{year}}</option>
+    </select>
+</div>
+
+<table class="country-stats-table">
+    <thead>
+        <tr>
+            <th>Continent</th>
+            <th>Region</th>
+            <th>Country</th>
+            <th>Year</th>
+            <th>GDP</th>
+            <th>Population</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of extendedCountryStats">
+            <td>{{item.continent_name}}</td>
+            <td>{{item.region_name}}</td>
+            <td>{{item.country_name}}</td>
+            <td>{{item.year}}</td>
+            <td>{{item.gdp | number}}</td>
+            <td>{{item.population | number}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="paginator">
+    <mat-paginator [length]="totalItems" [hidePageSize]="true" [pageSize]="pageSize" [pageIndex]="pageEvent?.pageIndex || 0"
+        [pageSizeOptions]="[10, 20, 50, 100]" (page)="onPageChange($event)"></mat-paginator>
+</div>
